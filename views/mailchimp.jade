@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Send email with mailchimp
+
+  if success
+    h3 Email was successfully sent
+  if error
+    h3 Error appeared while email sending:
+    p #{error}
+
+
+  form(method='POST')
+    div
+      input(name='username', placeholder='Input your name', required)
+    div
+      textarea(name='message', placeholder='Input your message', required)
+    div
+      input(type='submit')
